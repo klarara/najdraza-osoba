@@ -1,0 +1,44 @@
+@import 'colors';
+
+$box-size: 300px;
+$gap-size: 60px;
+
+@import 'mixins';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap-size;
+    height: 100vh;
+}
+
+.box1, .box2, .box3 {
+    width: $box-size;
+    height: $box-size;
+    color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-weight: 900;
+    border-radius: 1px;
+    opacity: 0;
+   transform: translateY(-100vh);
+   }
+
+.box1 {
+    background-color: $prva;
+   @include padanje(0s)
+}
+
+.box2 {
+    background-color: $druga;
+    @include padanje(1.5s)
+}
+
+.box3 {
+    background-color: $treca;
+    @include padanje(3s);
+}
+

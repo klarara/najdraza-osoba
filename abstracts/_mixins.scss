@@ -1,0 +1,17 @@
+@mixin padanje($delay) {
+    opacity: 0;
+    transform: translateY(-100vh);
+    animation: padanje 1.5s ease-out forwards;
+    animation-delay: $delay;
+}
+
+@keyframes padanje {
+    0% {
+        opacity: 0;
+        transform: translateY(-100vh); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
